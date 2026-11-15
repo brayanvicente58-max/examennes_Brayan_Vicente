@@ -9,7 +9,7 @@ def mostrar_inventario(inventario: dict) -> None:
 
 
 def registrar_compra(inventario: dict, codigo_producto: str, cantidad_solicitada: int) -> float | None:
-    """Valida existencia/stock, calcula importe y descuenta del inventario."""
+    #Valida existencia/stock, calcula importe y descuenta del inventario.
     print(f"\n>> Procesando compra: Producto '{codigo_producto}' | Cantidad: {cantidad_solicitada}")
 
     if codigo_producto not in inventario:
@@ -35,7 +35,7 @@ def registrar_compra(inventario: dict, codigo_producto: str, cantidad_solicitada
 
 
 def calcular_valor_inventario(inventario: dict) -> float:
-    """Retorna el valor monetario total de todos los productos en stock."""
+    #Retorna el valor monetario total de todos los productos en stock.
     return sum(datos["precio"] * datos["cantidad"] for datos in inventario.values())
 
 
